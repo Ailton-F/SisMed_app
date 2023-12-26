@@ -11,42 +11,52 @@ class HomeProCard extends StatefulWidget {
 }
 
 class _HomeProCardState extends State<HomeProCard> {
-
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
       borderRadius: BorderRadius.circular(4),
-      child: Container(
-        color: Colors.green,
-        width: double.infinity,
-        height: 160,
-        child: Row(
+      child: ElevatedButton(
+        onPressed: () {},
+        style: ElevatedButton.styleFrom(
+          elevation: 0,
+          padding: EdgeInsets.all(0),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.zero
+          ),
+        ),
+        child: Container(
+          color: Colors.green,
+          width: double.infinity,
+          height: 160,
+          child: Row(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
-        Padding(
-        padding: EdgeInsets.only(left: 14, bottom: 25),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-          Text(
-          widget.role,
-          style: const TextStyle(
-              color: Colors.white, fontWeight: FontWeight.w700),
+              Padding(
+                padding: EdgeInsets.only(left: 14, bottom: 25),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      widget.role,
+                      style: const TextStyle(
+                          color: Colors.white, fontWeight: FontWeight.w700),
+                    ),
+                    SizedBox(
+                      height: 6,
+                    ),
+                    Text(
+                      'Está ${widget.status}',
+                      style: const TextStyle(color: Colors.white),
+                    ),
+                  ],
+                ),
+              )
+            ],
+          ),
         ),
-        SizedBox(
-          height: 6,
-        ),
-        Text(
-          'Está ${widget.status}',
-          style: const TextStyle(color: Colors.white),
-        ),
-        ],
       ),
-    )],
-    )
-    ,
-    )
-    );;
+    );
+    ;
   }
 }
