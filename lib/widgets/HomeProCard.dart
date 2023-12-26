@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sismed/views/ProCalendar.dart';
 
 class HomeProCard extends StatefulWidget {
   const HomeProCard({super.key, required this.role, required this.status});
@@ -16,7 +17,12 @@ class _HomeProCardState extends State<HomeProCard> {
     return ClipRRect(
       borderRadius: BorderRadius.circular(4),
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context)=>const ProCalendar())
+            );
+        },
         style: ElevatedButton.styleFrom(
           elevation: 0,
           padding: EdgeInsets.all(0),
