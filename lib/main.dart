@@ -1,4 +1,5 @@
 import 'package:sismed/views/AlunoHomePage.dart';
+import 'package:sismed/views/ProfissionalHomePage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -32,7 +33,8 @@ class _InitalPageState extends State<InitialPage> {
   void _login(BuildContext context){
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => AlunoHomePage())
+      // MaterialPageRoute(builder: (context) => AlunoHomePage())
+      MaterialPageRoute(builder: (context) => ProfissionalHomePage())
     );
   }
 
